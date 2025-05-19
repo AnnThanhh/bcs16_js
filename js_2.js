@@ -53,3 +53,41 @@ bongDen.onmouseenter = function () {
 bongDen.onmouseleave = function () {
   bongDen.src = "./img/pic_bulboff.gif";
 };
+
+//yêu cầu: làm bài tập tính lương thực hiện chức năng tính lương của người dùng
+/**
+ * bước 1: thực hiện xử lý tạo sự kiện click cho button
+ * bước 2: lấy giá trị nhập từ người dùng thông qua dom và gắn vào biến (ví dụ: let a = document.getElementById("id").value) => giá trị sẽ được lấy từ ô input của người dùng thông qua id và gắn vào biến
+ * bước 3: thực hiện tính toán tổng lương = lương 1 giờ * tổng giờ làm
+ * bước 4: in kết quả ra màn hình ở div#result thông qua innerhtml với nội dung là "chức vụ" với "tổng số giờ làm" có lương là "tổng lương" (ví dụ document.getElementById("result").innerHTML = `nội dung....`)
+ *
+ */
+
+document.getElementById("calculateBtn").onclick = function () {
+  console.log("click");
+  //input
+  const tongGio = Number(document.getElementById("hours").value);
+  const luong1Gio = Number(document.getElementById("hourlyRate").value);
+  const chucVu = document.getElementById("position").value;
+
+  //process
+  let tongLuong = 0;
+  tongLuong = tongGio * luong1Gio;
+
+  //output
+  document.getElementById(
+    "result"
+  ).innerHTML = `${chucVu} có tổng ${tongGio} giờ làm với tổng lương là ${tongLuong.toLocaleString(
+    "vi-VN",
+    { style: "currency", currency: "VND" }
+  )}`;
+};
+
+
+let number = 45;
+
+let firstDigit = Math.floor(number / 10); // 4
+let secondDigit = number % 10; // 5
+
+console.log(firstDigit); // 4
+console.log(secondDigit); // 5
