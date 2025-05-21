@@ -83,7 +83,6 @@ document.getElementById("calculateBtn").onclick = function () {
   )}`;
 };
 
-
 let number = 45;
 
 let firstDigit = Math.floor(number / 10); // 4
@@ -91,3 +90,22 @@ let secondDigit = number % 10; // 5
 
 console.log(firstDigit); // 4
 console.log(secondDigit); // 5
+
+//yêu cầu: thực hiện chức năng tính điểm trung bình của học sinh
+document.getElementById("tinhDiem").onclick = function () {
+  //input
+  const toan = document.getElementById("toan").value * 1;
+  const ly = document.getElementById("ly").value * 1;
+  const hoa = document.getElementById("hoa").value * 1;
+
+  //process
+  let dtb = 0;
+  dtb = (toan + ly + hoa) / 3;
+
+  console.log(dtb);
+
+  //output
+  document.getElementById(
+    "ketQua"
+  ).innerHTML = `Điểm trung bình của bạn là ${dtb}`;
+};
