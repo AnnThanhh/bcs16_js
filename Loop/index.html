@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <h3>Vòng lặp</h3>
+      <h4>
+        Cho người dùng nhập vào số từ 1 đến n, in ra giao diện n lần dòng chữ
+        "Hello CyberSoft"
+      </h4>
+      <input
+        type="text"
+        id="number"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số lần"
+      />
+      <button
+        id="inKQ"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="result"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3>Vòng lặp - ví dụ 2</h3>
+      <h4>
+        Cho người dùng nhập vào số từ 1 đến n, tính tổng các số hạng dựa trên số
+        người dùng nhập n = 5 => 1 + 2 + 3 + 4 + 5
+      </h4>
+      <input
+        type="text"
+        id="vidu2"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số lần"
+      />
+      <button
+        id="inKQViDu2"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="resultViDu2"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3>Vòng lặp - ví dụ 3</h3>
+      <h4>
+        Cho người dùng nhập vào số từ 0 đến n, tính giai thừa các số hạng dựa
+        trên số người dùng nhập n = 5 => 1 * 2 * 3 * 4 * 5
+      </h4>
+      <input
+        type="text"
+        id="vidu3"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số lần"
+      />
+      <button
+        id="inKQViDu3"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="resultViDu3"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3>Vòng lặp - ví dụ 4</h3>
+      <h4>Cho người dùng nhập vào số từ 1 đến n, tính tổng số chẳn</h4>
+      <input
+        type="text"
+        id="vidu4"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số lần"
+      />
+      <button
+        id="inKQViDu4"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="resultViDu4"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3>Vòng lặp - ví dụ 5</h3>
+      <h4>
+        Cho người dùng nhập vào số từ 1 đến n, kiểm tra có phải số nguyên tố từ
+        giá trị người dùng nhập
+      </h4>
+      <input
+        type="text"
+        id="vidu5"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số lần"
+      />
+      <button
+        id="inKQViDu5"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="resultViDu5"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3>Vòng lặp - ví dụ 6</h3>
+      <h4>
+        viết chương trình cho phép người dùng nhập vào số điểm đánh giá và hiển thị sao tương ứng
+      </h4>
+      <input
+        type="text"
+        id="vidu6"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số sao"
+      />
+      <button
+        id="inKQViDu6"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="resultViDu6"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3>Vòng lặp for - ví dụ 1</h3>
+      <h4>Cho người dùng nhập vào số từ 1 đến n, tính tổng số chẳn</h4>
+      <input
+        type="text"
+        id="viduFor1"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số"
+      />
+      <button
+        id="inKQViDuFor1"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+      <div id="resultViDuFor1"></div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
