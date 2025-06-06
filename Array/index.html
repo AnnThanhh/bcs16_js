@@ -4,8 +4,176 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <script src="./index.js"></script>
+    <div class="container mx-auto">
+      <h3>Mảng - ví dụ 1</h3>
+      <h4>
+        Cho 1 danh sách mảng là [1,5,8,9,10,13] Yêu cầu: thêm số từ người dùng
+        nhập vào mảng Yêu cầu 2: xóa số từ người dùng nhập vào mảng
+      </h4>
+      <input
+        type="text"
+        id="vidu"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập số"
+      />
+      <button
+        id="inKQViDu"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        in kết quả
+      </button>
+
+      <button
+        id="inKQViDuXoa"
+        class="w-full bg-red-600 text-white py-2 rounded-xl hover:bg-red-700 transition mt-5"
+      >
+        xóa kết quả
+      </button>
+      <div id="resultViDu"></div>
+    </div>
+
+    <div class="container mx-auto mt-10">
+      <h3>Mảng - ví dụ 2</h3>
+      <h4>
+        Cho 1 danh sách mảng là [1,5,8,9,10,13] Yêu cầu: viết chương trình cập
+        nhật giá trị trong mảng. Thay đổi giá trị đó nếu trong mảng có chứa giá
+        trị đó và đồng hiện thời hiển thị cập nhật thành công và ngược lại, nếu
+        không tìm thấy thì thông báo không tìm thấy
+      </h4>
+      <input
+        type="text"
+        id="vidu2"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập vào giá trị cần thay đổi"
+      />
+
+      <input
+        type="text"
+        id="vidu2-2"
+        class="w-full p-2 my-5 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+        placeholder="Nhập vào giá trị mới "
+      />
+      <button
+        id="inKQViDu2"
+        class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        Cập nhật
+      </button>
+
+      <div id="resultViDu2"></div>
+    </div>
+
+    <!-- Dom tới thẻ thông tag name -->
+    <section>Hello World</section>
+    <section>Hello CyberSoft</section>
+    <section>Hello BCS16</section>
+
+    <div class="title">Title1</div>
+    <p class="title">Title2</p>
+
+    <div class="container mx-auto mt-10">
+      <form
+        class="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg space-y-4"
+        id="formThongTinNguoiDung"
+      >
+        <h2 class="text-2xl font-bold text-center">Thông Tin Người Dùng</h2>
+
+        <!-- Mã người dùng -->
+        <div>
+          <label for="userId" class="block text-sm font-medium mb-1"
+            >Mã người dùng</label
+          >
+          <input
+            type="text"
+            id="userId"
+            name="userId"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+            placeholder="Nhập mã người dùng"
+            required
+          />
+        </div>
+
+        <!-- Họ tên -->
+        <div>
+          <label for="fullName" class="block text-sm font-medium mb-1"
+            >Họ tên</label
+          >
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+            placeholder="Nhập họ tên"
+            required
+          />
+        </div>
+
+        <!-- Giới tính -->
+        <div>
+          <label for="gender" class="block text-sm font-medium mb-1"
+            >Giới tính</label
+          >
+          <select
+            id="gender"
+            name="gender"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+            required
+          >
+            <option value="" disabled selected>Chọn giới tính</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+          </select>
+        </div>
+
+        <!-- Số giờ làm -->
+        <div>
+          <label for="hours" class="block text-sm font-medium mb-1"
+            >Số giờ làm</label
+          >
+          <input
+            type="number"
+            id="hours"
+            name="hours"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+            placeholder="Nhập số giờ làm"
+            required
+          />
+        </div>
+
+        <!-- Lương mỗi giờ -->
+        <div>
+          <label for="rate" class="block text-sm font-medium mb-1"
+            >Lương mỗi giờ (VNĐ)</label
+          >
+          <input
+            type="number"
+            id="rate"
+            name="rate"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+            placeholder="Nhập lương mỗi giờ"
+            required
+          />
+        </div>
+
+        <!-- Nút gửi -->
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition"
+          >
+            Gửi
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

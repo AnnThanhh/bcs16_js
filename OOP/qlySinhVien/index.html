@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sinh vien</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Thông tin Sinh Viên</h2>
+      <form id="sinhVienForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input
+          type="text"
+          placeholder="Mã Sinh Viên"
+          id="maSinhVien"
+          class="border p-2 rounded"
+        />
+        <input
+          type="text"
+          placeholder="Tên Sinh Viên"
+          id="tenSinhVien"
+          class="border p-2 rounded"
+        />
+        <input
+          type="text"
+          placeholder="Số Điện Thoại"
+          id="soDienThoai"
+          class="border p-2 rounded"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          class="border p-2 rounded"
+        />
+        <input
+          type="number"
+          placeholder="Điểm Toán"
+          id="diemToan"
+          step="0.1"
+          class="border p-2 rounded"
+        />
+        <input
+          type="number"
+          placeholder="Điểm Lý"
+          id="diemLy"
+          step="0.1"
+          class="border p-2 rounded"
+        />
+        <input
+          type="number"
+          placeholder="Điểm Hóa"
+          id="diemHoa"
+          step="0.1"
+          class="border p-2 rounded"
+        />
+        <input
+          type="number"
+          placeholder="Điểm Rèn Luyện"
+          id="diemRenLuyen"
+          step="0.1"
+          class="border p-2 rounded"
+        />
+        <select
+          id="loaiSinhVien"
+          class="border p-2 rounded col-span-1 md:col-span-2"
+        >
+          <option value="">Chọn loại sinh viên</option>
+          <option value="thuong">Thường</option>
+          <option value="khoKhan">Khó Khăn</option>
+        </select>
+        <div class="col-span-1 md:col-span-2">
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Thêm Sinh Viên
+          </button>
+        </div>
+      </form>
+
+      <button
+      type="submit"
+        class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 mt-5"
+        id="btnLuuThongtin"
+      >
+        Lưu thông tin Sinh Viên
+      </button>
+
+      <div class="my-5 mx-auto">
+        <form class="flex flex-col sm:flex-row items-center gap-4 bg-white shadow-md rounded-2xl p-4" id="formTimKiem">
+          <!-- Input tìm kiếm -->
+          <input 
+            type="text" 
+            placeholder="Nhập từ khóa..." 
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            id="tuKhoa"
+          />
+
+      
+          <!-- Nút tìm kiếm -->
+          <button 
+            type="submit" 
+            class="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all"
+          >
+            Tìm kiếm
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto mt-10">
+      <h2 class="text-xl font-bold mb-4">Danh sách Sinh Viên</h2>
+      <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+        <table class="min-w-full table-auto border border-gray-300">
+          <thead class="bg-gray-200 text-gray-700">
+            <tr>
+              <th class="border px-4 py-2">Mã SV</th>
+              <th class="border px-4 py-2">Tên SV</th>
+              <th class="border px-4 py-2">SĐT</th>
+              <th class="border px-4 py-2">Email</th>
+              <th class="border px-4 py-2">Toán</th>
+              <th class="border px-4 py-2">Lý</th>
+              <th class="border px-4 py-2">Hóa</th>
+              <th class="border px-4 py-2">Rèn Luyện</th>
+              <th class="border px-4 py-2">Loại</th>
+              <th class="border px-4 py-2">Chức năng</th>
+            </tr>
+          </thead>
+          <tbody id="tblSinhVien" class="text-center">
+            <!-- Dữ liệu sinh viên sẽ được thêm vào đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type="module" src="./qlySinhVien.js"></script>
+  </body>
+</html>
