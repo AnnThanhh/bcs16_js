@@ -19,6 +19,8 @@ document.querySelector("#sinhVienForm").onsubmit = function (e) {
   arrSinhVien.push(sv);
 
   renderTableSinhVien(arrSinhVien);
+
+  saveLocalStorage();
   // output
   // let html = ``;
   // html = `
@@ -146,3 +148,22 @@ document.querySelector("#formTimKiem").onsubmit = function (e) {
   //output: render lại table
   renderTableSinhVien(arrFilter);
 };
+
+window.saveLocalStorage = function () {
+  //biến đổi mảng thành string []
+  let strSinhVien = JSON.stringify(arrSinhVien);
+
+  //lưu vào local storage
+  localStorage.setItem("arrSinhVien", strSinhVien);
+};
+
+window.loadLocalStorage = function () {
+  if (localStorage.getItem("arrSinhVien")) {
+    let strSinhVien = localStorage.getItem("arrSinhVien");
+
+    arrSinhVien = JSON.parse(strSinhVien);
+
+    renderTableSinhVien(arrSinhVien);
+  }
+};
+loadLocalStorage();
